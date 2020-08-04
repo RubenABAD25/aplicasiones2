@@ -17,6 +17,7 @@ public class Inventario {
 	private String descripcion;
 	@OneToMany(mappedBy = "inventario", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	List<Producto> productos;
+	private int stock;
 	public int getCodigo() {
 		return codigo;
 	}
@@ -41,5 +42,12 @@ public class Inventario {
 	public void setProductos(List<Producto> productos) {
 		this.productos = productos;
 	}
+	public int getStock() {
+		return stock;
+	}
+	public void setStock(int stock) {
+		this.stock = stock;
+	}
+	
 	
 }
